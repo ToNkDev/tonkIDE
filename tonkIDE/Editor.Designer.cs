@@ -77,6 +77,8 @@
             turtle_image = new PictureBox();
             turtle_close = new Button();
             file_name = new TextBox();
+            groupBox4 = new GroupBox();
+            file_list = new ListBox();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -95,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             turtle_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)turtle_image).BeginInit();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // fileToolStripMenuItem
@@ -179,28 +182,28 @@
             // darkToolStripMenuItem
             // 
             darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            darkToolStripMenuItem.Size = new Size(125, 22);
+            darkToolStripMenuItem.Size = new Size(180, 22);
             darkToolStripMenuItem.Text = "Dark";
             darkToolStripMenuItem.Click += darkToolStripMenuItem_Click;
             // 
             // whiteToolStripMenuItem
             // 
             whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(125, 22);
+            whiteToolStripMenuItem.Size = new Size(180, 22);
             whiteToolStripMenuItem.Text = "White";
             whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
             // 
             // obsidianToolStripMenuItem
             // 
             obsidianToolStripMenuItem.Name = "obsidianToolStripMenuItem";
-            obsidianToolStripMenuItem.Size = new Size(125, 22);
+            obsidianToolStripMenuItem.Size = new Size(180, 22);
             obsidianToolStripMenuItem.Text = "Obsidian";
             obsidianToolStripMenuItem.Click += obsidianToolStripMenuItem_Click;
             // 
             // brainHurtToolStripMenuItem
             // 
             brainHurtToolStripMenuItem.Name = "brainHurtToolStripMenuItem";
-            brainHurtToolStripMenuItem.Size = new Size(125, 22);
+            brainHurtToolStripMenuItem.Size = new Size(180, 22);
             brainHurtToolStripMenuItem.Text = "BrainHurt";
             brainHurtToolStripMenuItem.Click += brainHurtToolStripMenuItem_Click;
             // 
@@ -450,7 +453,7 @@
             // 
             pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
             pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox10.Location = new Point(30, 22);
+            pictureBox10.Location = new Point(47, 22);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(123, 123);
             pictureBox10.TabIndex = 17;
@@ -487,7 +490,7 @@
             pictureBox7.Anchor = AnchorStyles.None;
             pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
             pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(2, 255);
+            pictureBox7.Location = new Point(1, 255);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(46, 46);
             pictureBox7.TabIndex = 22;
@@ -541,7 +544,7 @@
             richTextBox1.ForeColor = Color.Silver;
             richTextBox1.Location = new Point(241, 69);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1420, 861);
+            richTextBox1.Size = new Size(1205, 861);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
@@ -552,9 +555,9 @@
             turtle_box.Controls.Add(turtle_label);
             turtle_box.Controls.Add(turtle_image);
             turtle_box.Controls.Add(turtle_close);
-            turtle_box.Location = new Point(1350, 648);
+            turtle_box.Location = new Point(1347, 648);
             turtle_box.Name = "turtle_box";
-            turtle_box.Size = new Size(311, 282);
+            turtle_box.Size = new Size(314, 282);
             turtle_box.TabIndex = 3;
             turtle_box.TabStop = false;
             // 
@@ -613,12 +616,35 @@
             file_name.Size = new Size(1420, 22);
             file_name.TabIndex = 4;
             // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(file_list);
+            groupBox4.Location = new Point(1461, 69);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(200, 573);
+            groupBox4.TabIndex = 5;
+            groupBox4.TabStop = false;
+            // 
+            // file_list
+            // 
+            file_list.BackColor = Color.FromArgb(35, 35, 35);
+            file_list.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            file_list.ForeColor = Color.Silver;
+            file_list.FormattingEnabled = true;
+            file_list.ItemHeight = 14;
+            file_list.Location = new Point(0, 36);
+            file_list.Name = "file_list";
+            file_list.Size = new Size(200, 522);
+            file_list.TabIndex = 6;
+            file_list.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
             // Editor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(1673, 958);
+            Controls.Add(groupBox4);
             Controls.Add(file_name);
             Controls.Add(turtle_box);
             Controls.Add(richTextBox1);
@@ -648,6 +674,7 @@
             turtle_box.ResumeLayout(false);
             turtle_box.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)turtle_image).EndInit();
+            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -702,5 +729,7 @@
         private Button turtle_close;
         private Label turtle_title;
         private TextBox file_name;
+        private GroupBox groupBox4;
+        private ListBox file_list;
     }
 }

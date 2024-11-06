@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static tonkIDE.Editor;
+using System.IO;
 
 namespace tonkIDE
 {
@@ -200,7 +201,26 @@ namespace tonkIDE
             control.Height += (control.Height * height) / oldSize.Height;
         }
 
+        public void openFile()
+        {
+            OpenFileDialog odf = new OpenFileDialog();
+            if (odf.ShowDialog() == DialogResult.OK)
+            {
+                String S = File.ReadAllText(odf.FileName);
+                this.richTextBox1.Text = S;
+                this.codeVal = false;
+                this.file_name.Text = odf.FileName;
+                this.file_name.Text = odf.FileName;
 
+                string directoryPath = Path.GetDirectoryName(odf.FileName);
+                this.file_list.Items.Clear();
+                String[] files = Directory.GetFiles(directoryPath);
+                foreach (string file in files)
+                {
+                    this.file_list.Items.Add(Path.GetFileName(file)); // Only add the file name
+                }
+            }
+        }
         public class KW
         {
 
@@ -556,54 +576,28 @@ namespace tonkIDE
         {
             saveFile(".txt");
             this.codeVal = false;
-            
+
         }
 
         private void open_txt_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odf = new OpenFileDialog();
-            if (odf.ShowDialog() == DialogResult.OK)
-            {
-                String S = File.ReadAllText(odf.FileName);
-                this.richTextBox1.Text = S;
-                this.codeVal = false;
-                this.file_name.Text = odf.FileName;
-                this.file_name.Text = odf.FileName;
-            }
+            openFile();
         }
 
         private void opentxtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odf = new OpenFileDialog();
-            if (odf.ShowDialog() == DialogResult.OK)
-            {
-                String S = File.ReadAllText(odf.FileName);
-                this.richTextBox1.Text = S;
-            }
+            openFile();
         }
 
         private void open_cpp_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odf = new OpenFileDialog();
-            if (odf.ShowDialog() == DialogResult.OK)
-            {
-                String S = File.ReadAllText(odf.FileName);
-                this.richTextBox1.Text = S;
-                this.codeVal = true;
-                this.file_name.Text = odf.FileName;
-            }
+            openFile();
             highlightAllCode();
         }
 
         private void opencppToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odf = new OpenFileDialog();
-            if (odf.ShowDialog() == DialogResult.OK)
-            {
-                String S = File.ReadAllText(odf.FileName);
-                this.richTextBox1.Text = S;
-                this.file_name.Text = odf.FileName;
-            }
+            openFile();
             highlightAllCode();
         }
 
@@ -752,6 +746,9 @@ namespace tonkIDE
             this.turtle_label.Text = turtle_quotes[rndIndex];
         }
 
-       
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
