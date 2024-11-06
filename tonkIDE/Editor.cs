@@ -26,7 +26,7 @@ namespace tonkIDE
             InitializeComponent();
             richTextBox1.KeyDown += richTextBox1_KeyDown;
             highlightAllCode();
-            if(Properties.Settings.Default.theme == "Dark")
+            if (Properties.Settings.Default.theme == "Dark")
             {
                 TH.setDarkTheme(richTextBox1, keywords, highlightAllCode);
             }
@@ -42,6 +42,12 @@ namespace tonkIDE
             {
                 TH.setBrainhurtTheme(richTextBox1, keywords, highlightAllCode);
             }
+
+            this.turtle_box.Visible = false;
+            this.turtle_close.Visible = false;
+            this.turtle_image.Visible = false;
+            this.turtle_label.Visible = false;
+            this.turtle_label.ReadOnly = true;
 
         }
         private bool isHighlighting = false;
@@ -62,7 +68,7 @@ namespace tonkIDE
         //THEME CHANGING CLASS METHODS
         public class themeChanger
         {
-            public void setDarkTheme(RichTextBox richTextBox1, KW[] keywords,HighlightDelegate highlightAllCode)
+            public void setDarkTheme(RichTextBox richTextBox1, KW[] keywords, HighlightDelegate highlightAllCode)
             {
                 richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
                 richTextBox1.ForeColor = Color.Silver;
@@ -136,7 +142,7 @@ namespace tonkIDE
                 highlightAllCode();
                 Properties.Settings.Default.theme = "Obsidian";
                 Properties.Settings.Default.Save();
-               
+
             }
 
             public void setBrainhurtTheme(RichTextBox richTextBox1, KW[] keywords, HighlightDelegate highlightAllCode)
@@ -209,7 +215,7 @@ namespace tonkIDE
         }
 
 
-       
+
 
 
         public void saveFile(String format)
@@ -678,7 +684,7 @@ namespace tonkIDE
             int lenght = this.richTextBox1.Text.Length;
             int openCount = 0;
             int closedCount = 0;
-            for(int i=0; i<lenght; i++)
+            for (int i = 0; i < lenght; i++)
             {
                 if (richTextBox1.Text[i] == '{')
                 {
@@ -695,8 +701,36 @@ namespace tonkIDE
             }
             else
             {
-                MessageBox.Show("You have: \n "+openCount.ToString()+" Opening brackets  {  \n "+closedCount.ToString()+" Closing Brackets  } ", "Debug Bracket Counter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have: \n " + openCount.ToString() + " Opening brackets  {  \n " + closedCount.ToString() + " Closing Brackets  } ", "Debug Bracket Counter", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void turtle_close_Click(object sender, EventArgs e)
+        {
+            this.turtle_box.Visible = false;
+            this.turtle_close.Visible = false;
+            this.turtle_image.Visible = false;
+            this.turtle_label.Visible = false;
+        }
+        String[] turtle_quotes = new String[]
+            {
+                "You suck",
+                "Bro forgot a semicolomn 😂😂😂",
+                "This code = McDonald Ice cream machine",
+                "You sure 'bout that?",
+                "Go back to Scratch",
+                "Ты полный отстой",
+            };
+            
+        private void turtle_btn_Click(object sender, EventArgs e)
+        {
+            this.turtle_box.Visible = true;
+            this.turtle_close.Visible = true;
+            this.turtle_image.Visible = true;
+            this.turtle_label.Visible = true;
+            Random rnd = new Random();
+            int rndIndex = rnd.Next(0, 6);
+            this.turtle_label.Text = turtle_quotes[rndIndex];
         }
     }
 }

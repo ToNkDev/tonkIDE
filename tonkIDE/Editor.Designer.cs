@@ -45,45 +45,55 @@
             obsidianToolStripMenuItem = new ToolStripMenuItem();
             brainHurtToolStripMenuItem = new ToolStripMenuItem();
             groupBox1 = new GroupBox();
-            pictureBox6 = new PictureBox();
-            highlight = new Button();
-            pictureBox7 = new PictureBox();
-            save_txt = new Button();
-            pictureBox8 = new PictureBox();
-            open_txt = new Button();
-            pictureBox9 = new PictureBox();
-            new_txt = new Button();
-            pictureBox10 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            run_cpp = new Button();
-            pictureBox4 = new PictureBox();
-            save_cpp = new Button();
-            pictureBox3 = new PictureBox();
-            open_cpp = new Button();
-            pictureBox2 = new PictureBox();
-            new_cpp = new Button();
-            pictureBox1 = new PictureBox();
-            richTextBox1 = new RichTextBox();
-            fontDialog1 = new FontDialog();
-            groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            pictureBox12 = new PictureBox();
+            turtle_btn = new Button();
             pictureBox11 = new PictureBox();
             debug_btn = new Button();
+            pictureBox6 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            highlight = new Button();
+            new_cpp = new Button();
+            pictureBox5 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            run_cpp = new Button();
+            open_cpp = new Button();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            save_cpp = new Button();
+            groupBox2 = new GroupBox();
+            pictureBox10 = new PictureBox();
+            new_txt = new Button();
+            pictureBox9 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            open_txt = new Button();
+            save_txt = new Button();
+            pictureBox8 = new PictureBox();
+            richTextBox1 = new RichTextBox();
+            fontDialog1 = new FontDialog();
+            turtle_box = new GroupBox();
+            turtle_label = new TextBox();
+            turtle_image = new PictureBox();
+            turtle_close = new Button();
+            turtle_title = new Label();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            turtle_box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)turtle_image).BeginInit();
             SuspendLayout();
             // 
             // fileToolStripMenuItem
@@ -205,263 +215,10 @@
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // pictureBox6
-            // 
-            pictureBox6.Anchor = AnchorStyles.None;
-            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
-            pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox6.Location = new Point(0, 359);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(46, 46);
-            pictureBox6.TabIndex = 24;
-            pictureBox6.TabStop = false;
-            // 
-            // highlight
-            // 
-            highlight.BackColor = Color.FromArgb(64, 64, 64);
-            highlight.FlatStyle = FlatStyle.Flat;
-            highlight.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            highlight.ForeColor = SystemColors.ButtonFace;
-            highlight.Location = new Point(46, 359);
-            highlight.Name = "highlight";
-            highlight.Size = new Size(159, 46);
-            highlight.TabIndex = 23;
-            highlight.Text = "Highlight ";
-            highlight.TextAlign = ContentAlignment.MiddleRight;
-            highlight.UseVisualStyleBackColor = false;
-            highlight.Click += highlight_Click;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Anchor = AnchorStyles.None;
-            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
-            pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(0, 255);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(46, 46);
-            pictureBox7.TabIndex = 22;
-            pictureBox7.TabStop = false;
-            // 
-            // save_txt
-            // 
-            save_txt.BackColor = Color.FromArgb(64, 64, 64);
-            save_txt.FlatStyle = FlatStyle.Flat;
-            save_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            save_txt.ForeColor = SystemColors.ButtonFace;
-            save_txt.Location = new Point(47, 255);
-            save_txt.Name = "save_txt";
-            save_txt.Size = new Size(159, 46);
-            save_txt.TabIndex = 21;
-            save_txt.Text = "Save Text File";
-            save_txt.TextAlign = ContentAlignment.MiddleRight;
-            save_txt.UseVisualStyleBackColor = false;
-            save_txt.Click += button2_Click;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Anchor = AnchorStyles.None;
-            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
-            pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox8.Location = new Point(0, 203);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(46, 46);
-            pictureBox8.TabIndex = 20;
-            pictureBox8.TabStop = false;
-            // 
-            // open_txt
-            // 
-            open_txt.BackColor = Color.FromArgb(64, 64, 64);
-            open_txt.FlatStyle = FlatStyle.Flat;
-            open_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            open_txt.ForeColor = SystemColors.ButtonFace;
-            open_txt.Location = new Point(47, 203);
-            open_txt.Name = "open_txt";
-            open_txt.Size = new Size(159, 46);
-            open_txt.TabIndex = 19;
-            open_txt.Text = "Open Text File";
-            open_txt.TextAlign = ContentAlignment.MiddleRight;
-            open_txt.UseVisualStyleBackColor = false;
-            open_txt.Click += open_txt_Click;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Anchor = AnchorStyles.None;
-            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
-            pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox9.Location = new Point(1, 151);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(46, 46);
-            pictureBox9.TabIndex = 18;
-            pictureBox9.TabStop = false;
-            // 
-            // new_txt
-            // 
-            new_txt.BackColor = Color.FromArgb(64, 64, 64);
-            new_txt.FlatStyle = FlatStyle.Flat;
-            new_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            new_txt.ForeColor = SystemColors.ButtonFace;
-            new_txt.Location = new Point(47, 151);
-            new_txt.Name = "new_txt";
-            new_txt.Size = new Size(159, 46);
-            new_txt.TabIndex = 16;
-            new_txt.Text = "New Text File";
-            new_txt.TextAlign = ContentAlignment.MiddleRight;
-            new_txt.UseVisualStyleBackColor = false;
-            new_txt.Click += new_txt_Click;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
-            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox10.Location = new Point(30, 22);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(123, 123);
-            pictureBox10.TabIndex = 17;
-            pictureBox10.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Anchor = AnchorStyles.None;
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
-            pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox5.Location = new Point(0, 307);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(46, 46);
-            pictureBox5.TabIndex = 15;
-            pictureBox5.TabStop = false;
-            // 
-            // run_cpp
-            // 
-            run_cpp.BackColor = Color.FromArgb(64, 64, 64);
-            run_cpp.FlatStyle = FlatStyle.Flat;
-            run_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            run_cpp.ForeColor = SystemColors.ButtonFace;
-            run_cpp.Location = new Point(46, 307);
-            run_cpp.Name = "run_cpp";
-            run_cpp.Size = new Size(159, 46);
-            run_cpp.TabIndex = 14;
-            run_cpp.Text = "Run C++ File";
-            run_cpp.TextAlign = ContentAlignment.MiddleRight;
-            run_cpp.UseVisualStyleBackColor = false;
-            run_cpp.Click += run_cpp_Click;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Anchor = AnchorStyles.None;
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox4.Location = new Point(0, 255);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(46, 46);
-            pictureBox4.TabIndex = 13;
-            pictureBox4.TabStop = false;
-            // 
-            // save_cpp
-            // 
-            save_cpp.BackColor = Color.FromArgb(64, 64, 64);
-            save_cpp.FlatStyle = FlatStyle.Flat;
-            save_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            save_cpp.ForeColor = SystemColors.ButtonFace;
-            save_cpp.Location = new Point(46, 255);
-            save_cpp.Name = "save_cpp";
-            save_cpp.Size = new Size(159, 46);
-            save_cpp.TabIndex = 12;
-            save_cpp.Text = "Save C++ File";
-            save_cpp.TextAlign = ContentAlignment.MiddleRight;
-            save_cpp.UseVisualStyleBackColor = false;
-            save_cpp.Click += save_cpp_Click;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Anchor = AnchorStyles.None;
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(0, 203);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(46, 46);
-            pictureBox3.TabIndex = 11;
-            pictureBox3.TabStop = false;
-            // 
-            // open_cpp
-            // 
-            open_cpp.BackColor = Color.FromArgb(64, 64, 64);
-            open_cpp.FlatStyle = FlatStyle.Flat;
-            open_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            open_cpp.ForeColor = SystemColors.ButtonFace;
-            open_cpp.Location = new Point(46, 203);
-            open_cpp.Name = "open_cpp";
-            open_cpp.Size = new Size(159, 46);
-            open_cpp.TabIndex = 10;
-            open_cpp.Text = "Open C++ File";
-            open_cpp.TextAlign = ContentAlignment.MiddleRight;
-            open_cpp.UseVisualStyleBackColor = false;
-            open_cpp.Click += open_cpp_Click;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Anchor = AnchorStyles.None;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(0, 151);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(46, 46);
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
-            // 
-            // new_cpp
-            // 
-            new_cpp.BackColor = Color.FromArgb(64, 64, 64);
-            new_cpp.FlatStyle = FlatStyle.Flat;
-            new_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            new_cpp.ForeColor = SystemColors.ButtonFace;
-            new_cpp.Location = new Point(46, 151);
-            new_cpp.Name = "new_cpp";
-            new_cpp.Size = new Size(159, 46);
-            new_cpp.TabIndex = 5;
-            new_cpp.Text = "New C++ File";
-            new_cpp.TextAlign = ContentAlignment.MiddleRight;
-            new_cpp.UseVisualStyleBackColor = false;
-            new_cpp.Click += new_cpp_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.terminal_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(46, 22);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(123, 123);
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
-            richTextBox1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            richTextBox1.ForeColor = Color.Silver;
-            richTextBox1.Location = new Point(241, 49);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1420, 881);
-            richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(pictureBox10);
-            groupBox2.Controls.Add(new_txt);
-            groupBox2.Controls.Add(pictureBox9);
-            groupBox2.Controls.Add(pictureBox7);
-            groupBox2.Controls.Add(open_txt);
-            groupBox2.Controls.Add(save_txt);
-            groupBox2.Controls.Add(pictureBox8);
-            groupBox2.Location = new Point(5, 22);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(212, 325);
-            groupBox2.TabIndex = 25;
-            groupBox2.TabStop = false;
-            // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(pictureBox12);
+            groupBox3.Controls.Add(turtle_btn);
             groupBox3.Controls.Add(pictureBox11);
             groupBox3.Controls.Add(debug_btn);
             groupBox3.Controls.Add(pictureBox6);
@@ -477,9 +234,35 @@
             groupBox3.Controls.Add(save_cpp);
             groupBox3.Location = new Point(6, 353);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(212, 498);
+            groupBox3.Size = new Size(212, 531);
             groupBox3.TabIndex = 26;
             groupBox3.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.Anchor = AnchorStyles.None;
+            pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
+            pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox12.Location = new Point(1, 463);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(46, 46);
+            pictureBox12.TabIndex = 28;
+            pictureBox12.TabStop = false;
+            // 
+            // turtle_btn
+            // 
+            turtle_btn.BackColor = Color.FromArgb(64, 64, 64);
+            turtle_btn.FlatStyle = FlatStyle.Flat;
+            turtle_btn.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            turtle_btn.ForeColor = SystemColors.ButtonFace;
+            turtle_btn.Location = new Point(47, 463);
+            turtle_btn.Name = "turtle_btn";
+            turtle_btn.Size = new Size(159, 46);
+            turtle_btn.TabIndex = 27;
+            turtle_btn.Text = "Support Turtle";
+            turtle_btn.TextAlign = ContentAlignment.MiddleRight;
+            turtle_btn.UseVisualStyleBackColor = false;
+            turtle_btn.Click += turtle_btn_Click;
             // 
             // pictureBox11
             // 
@@ -507,12 +290,325 @@
             debug_btn.UseVisualStyleBackColor = false;
             debug_btn.Click += debug_btn_Click;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Anchor = AnchorStyles.None;
+            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
+            pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox6.Location = new Point(1, 359);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(46, 46);
+            pictureBox6.TabIndex = 24;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.terminal_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(46, 22);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 123);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // highlight
+            // 
+            highlight.BackColor = Color.FromArgb(64, 64, 64);
+            highlight.FlatStyle = FlatStyle.Flat;
+            highlight.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            highlight.ForeColor = SystemColors.ButtonFace;
+            highlight.Location = new Point(46, 359);
+            highlight.Name = "highlight";
+            highlight.Size = new Size(159, 46);
+            highlight.TabIndex = 23;
+            highlight.Text = "Highlight ";
+            highlight.TextAlign = ContentAlignment.MiddleRight;
+            highlight.UseVisualStyleBackColor = false;
+            highlight.Click += highlight_Click;
+            // 
+            // new_cpp
+            // 
+            new_cpp.BackColor = Color.FromArgb(64, 64, 64);
+            new_cpp.FlatStyle = FlatStyle.Flat;
+            new_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            new_cpp.ForeColor = SystemColors.ButtonFace;
+            new_cpp.Location = new Point(47, 151);
+            new_cpp.Name = "new_cpp";
+            new_cpp.Size = new Size(159, 46);
+            new_cpp.TabIndex = 5;
+            new_cpp.Text = "New C++ File";
+            new_cpp.TextAlign = ContentAlignment.MiddleRight;
+            new_cpp.UseVisualStyleBackColor = false;
+            new_cpp.Click += new_cpp_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Anchor = AnchorStyles.None;
+            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox5.Location = new Point(1, 307);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(46, 46);
+            pictureBox5.TabIndex = 15;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.None;
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Location = new Point(1, 151);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(46, 46);
+            pictureBox2.TabIndex = 9;
+            pictureBox2.TabStop = false;
+            // 
+            // run_cpp
+            // 
+            run_cpp.BackColor = Color.FromArgb(64, 64, 64);
+            run_cpp.FlatStyle = FlatStyle.Flat;
+            run_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            run_cpp.ForeColor = SystemColors.ButtonFace;
+            run_cpp.Location = new Point(46, 307);
+            run_cpp.Name = "run_cpp";
+            run_cpp.Size = new Size(159, 46);
+            run_cpp.TabIndex = 14;
+            run_cpp.Text = "Run C++ File";
+            run_cpp.TextAlign = ContentAlignment.MiddleRight;
+            run_cpp.UseVisualStyleBackColor = false;
+            run_cpp.Click += run_cpp_Click;
+            // 
+            // open_cpp
+            // 
+            open_cpp.BackColor = Color.FromArgb(64, 64, 64);
+            open_cpp.FlatStyle = FlatStyle.Flat;
+            open_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            open_cpp.ForeColor = SystemColors.ButtonFace;
+            open_cpp.Location = new Point(46, 203);
+            open_cpp.Name = "open_cpp";
+            open_cpp.Size = new Size(159, 46);
+            open_cpp.TabIndex = 10;
+            open_cpp.Text = "Open C++ File";
+            open_cpp.TextAlign = ContentAlignment.MiddleRight;
+            open_cpp.UseVisualStyleBackColor = false;
+            open_cpp.Click += open_cpp_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Anchor = AnchorStyles.None;
+            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox4.Location = new Point(1, 255);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(46, 46);
+            pictureBox4.TabIndex = 13;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.None;
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Location = new Point(1, 203);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(46, 46);
+            pictureBox3.TabIndex = 11;
+            pictureBox3.TabStop = false;
+            // 
+            // save_cpp
+            // 
+            save_cpp.BackColor = Color.FromArgb(64, 64, 64);
+            save_cpp.FlatStyle = FlatStyle.Flat;
+            save_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            save_cpp.ForeColor = SystemColors.ButtonFace;
+            save_cpp.Location = new Point(46, 255);
+            save_cpp.Name = "save_cpp";
+            save_cpp.Size = new Size(159, 46);
+            save_cpp.TabIndex = 12;
+            save_cpp.Text = "Save C++ File";
+            save_cpp.TextAlign = ContentAlignment.MiddleRight;
+            save_cpp.UseVisualStyleBackColor = false;
+            save_cpp.Click += save_cpp_Click;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(pictureBox10);
+            groupBox2.Controls.Add(new_txt);
+            groupBox2.Controls.Add(pictureBox9);
+            groupBox2.Controls.Add(pictureBox7);
+            groupBox2.Controls.Add(open_txt);
+            groupBox2.Controls.Add(save_txt);
+            groupBox2.Controls.Add(pictureBox8);
+            groupBox2.Location = new Point(5, 22);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(212, 325);
+            groupBox2.TabIndex = 25;
+            groupBox2.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Location = new Point(30, 22);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(123, 123);
+            pictureBox10.TabIndex = 17;
+            pictureBox10.TabStop = false;
+            // 
+            // new_txt
+            // 
+            new_txt.BackColor = Color.FromArgb(64, 64, 64);
+            new_txt.FlatStyle = FlatStyle.Flat;
+            new_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            new_txt.ForeColor = SystemColors.ButtonFace;
+            new_txt.Location = new Point(47, 151);
+            new_txt.Name = "new_txt";
+            new_txt.Size = new Size(159, 46);
+            new_txt.TabIndex = 16;
+            new_txt.Text = "New Text File";
+            new_txt.TextAlign = ContentAlignment.MiddleRight;
+            new_txt.UseVisualStyleBackColor = false;
+            new_txt.Click += new_txt_Click;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Anchor = AnchorStyles.None;
+            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox9.Location = new Point(1, 151);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(46, 46);
+            pictureBox9.TabIndex = 18;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Anchor = AnchorStyles.None;
+            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
+            pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox7.Location = new Point(2, 255);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(46, 46);
+            pictureBox7.TabIndex = 22;
+            pictureBox7.TabStop = false;
+            // 
+            // open_txt
+            // 
+            open_txt.BackColor = Color.FromArgb(64, 64, 64);
+            open_txt.FlatStyle = FlatStyle.Flat;
+            open_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            open_txt.ForeColor = SystemColors.ButtonFace;
+            open_txt.Location = new Point(47, 203);
+            open_txt.Name = "open_txt";
+            open_txt.Size = new Size(159, 46);
+            open_txt.TabIndex = 19;
+            open_txt.Text = "Open Text File";
+            open_txt.TextAlign = ContentAlignment.MiddleRight;
+            open_txt.UseVisualStyleBackColor = false;
+            open_txt.Click += open_txt_Click;
+            // 
+            // save_txt
+            // 
+            save_txt.BackColor = Color.FromArgb(64, 64, 64);
+            save_txt.FlatStyle = FlatStyle.Flat;
+            save_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            save_txt.ForeColor = SystemColors.ButtonFace;
+            save_txt.Location = new Point(47, 255);
+            save_txt.Name = "save_txt";
+            save_txt.Size = new Size(159, 46);
+            save_txt.TabIndex = 21;
+            save_txt.Text = "Save Text File";
+            save_txt.TextAlign = ContentAlignment.MiddleRight;
+            save_txt.UseVisualStyleBackColor = false;
+            save_txt.Click += button2_Click;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Anchor = AnchorStyles.None;
+            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
+            pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox8.Location = new Point(2, 203);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(46, 46);
+            pictureBox8.TabIndex = 20;
+            pictureBox8.TabStop = false;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
+            richTextBox1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            richTextBox1.ForeColor = Color.Silver;
+            richTextBox1.Location = new Point(241, 49);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(1420, 881);
+            richTextBox1.TabIndex = 2;
+            richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // turtle_box
+            // 
+            turtle_box.Controls.Add(turtle_title);
+            turtle_box.Controls.Add(turtle_label);
+            turtle_box.Controls.Add(turtle_image);
+            turtle_box.Controls.Add(turtle_close);
+            turtle_box.Location = new Point(1350, 648);
+            turtle_box.Name = "turtle_box";
+            turtle_box.Size = new Size(311, 282);
+            turtle_box.TabIndex = 3;
+            turtle_box.TabStop = false;
+            // 
+            // turtle_label
+            // 
+            turtle_label.BackColor = Color.FromArgb(35, 35, 35);
+            turtle_label.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            turtle_label.ForeColor = Color.Silver;
+            turtle_label.Location = new Point(6, 68);
+            turtle_label.Name = "turtle_label";
+            turtle_label.Size = new Size(299, 22);
+            turtle_label.TabIndex = 31;
+            // 
+            // turtle_image
+            // 
+            turtle_image.BackgroundImage = (Image)resources.GetObject("turtle_image.BackgroundImage");
+            turtle_image.BackgroundImageLayout = ImageLayout.Stretch;
+            turtle_image.Location = new Point(83, 97);
+            turtle_image.Name = "turtle_image";
+            turtle_image.Size = new Size(228, 185);
+            turtle_image.TabIndex = 30;
+            turtle_image.TabStop = false;
+            // 
+            // turtle_close
+            // 
+            turtle_close.BackColor = Color.FromArgb(64, 64, 64);
+            turtle_close.FlatStyle = FlatStyle.Flat;
+            turtle_close.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            turtle_close.ForeColor = SystemColors.ButtonFace;
+            turtle_close.Location = new Point(276, 9);
+            turtle_close.Name = "turtle_close";
+            turtle_close.Size = new Size(35, 37);
+            turtle_close.TabIndex = 29;
+            turtle_close.Text = "X";
+            turtle_close.UseVisualStyleBackColor = false;
+            turtle_close.Click += turtle_close_Click;
+            // 
+            // turtle_title
+            // 
+            turtle_title.AutoSize = true;
+            turtle_title.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            turtle_title.ForeColor = Color.Gray;
+            turtle_title.Location = new Point(6, 37);
+            turtle_title.Name = "turtle_title";
+            turtle_title.Size = new Size(207, 19);
+            turtle_title.TabIndex = 32;
+            turtle_title.Text = "Support Turtle says...";
+            // 
             // Editor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(1673, 958);
+            Controls.Add(turtle_box);
             Controls.Add(richTextBox1);
             Controls.Add(groupBox1);
             Controls.Add(menuStrip1);
@@ -523,19 +619,23 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
-            groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            turtle_box.ResumeLayout(false);
+            turtle_box.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)turtle_image).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -582,5 +682,12 @@
         private PictureBox pictureBox11;
         private Button debug_btn;
         private GroupBox groupBox2;
+        private PictureBox pictureBox12;
+        private Button turtle_btn;
+        private GroupBox turtle_box;
+        private TextBox turtle_label;
+        private PictureBox turtle_image;
+        private Button turtle_close;
+        private Label turtle_title;
     }
 }
