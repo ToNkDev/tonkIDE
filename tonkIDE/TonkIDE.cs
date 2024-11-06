@@ -25,7 +25,6 @@ namespace tonkIDE
         {
             Editor EditorWindow = new Editor();
             EditorWindow.richTBtext = "#include <iostream> \n using namespace std; \n int main()\n{\n\n\nint prevent_terminal_closingg; \n cin>>prevent_terminal_closingg;}";
-            int test = 1;
             EditorWindow.codeVal = true;
             EditorWindow.ShowDialog();
         }
