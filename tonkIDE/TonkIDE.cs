@@ -43,6 +43,7 @@ namespace tonkIDE
                 EditorWindow.fileNameText = odf.FileName;
                 EditorWindow.codeVal = true;
                 EditorWindow.richTBtext = S;
+                EditorWindow.setCurrFile = odf;
                 EditorWindow.ShowDialog();
                
                 
@@ -60,8 +61,10 @@ namespace tonkIDE
                 EditorWindow.codeVal = false;
                 EditorWindow.fileNameText = odf.FileName;
                 EditorWindow.richTBtext = S;
-                EditorWindow.ShowDialog();
+                EditorWindow.setCurrFile = odf;
                 EditorWindow.fileNameText = odf.FileName;
+                EditorWindow.ShowDialog();
+               
             }
         }
     }

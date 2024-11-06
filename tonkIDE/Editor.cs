@@ -50,9 +50,15 @@ namespace tonkIDE
             this.turtle_label.Visible = false;
             this.turtle_label.ReadOnly = true;
 
+            this.richTextBox1.Multiline = true;
+            richTextBox1.WordWrap = false;  // Disable word wrapping
+            richTextBox1.ScrollBars = RichTextBoxScrollBars.Horizontal;  // Enable horizontal scrollbar
             this.file_name.ReadOnly = true;
 
+            
+
         }
+        OpenFileDialog currFile = new OpenFileDialog();
         private bool isHighlighting = false;
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -453,7 +459,25 @@ namespace tonkIDE
 
 
 
-
+        public OpenFileDialog setCurrFile
+        {
+            get
+            {
+                return this.currFile;
+            }
+            set
+            {
+                this.currFile = value;
+                this.file_name.Text = currFile.FileName;
+                string directoryPath = Path.GetDirectoryName(currFile.FileName);
+                this.file_list.Items.Clear();
+                String[] files = Directory.GetFiles(directoryPath);
+                foreach (string file in files)
+                {
+                    this.file_list.Items.Add(Path.GetFileName(file)); // Only add the file name
+                }
+            }
+        }
 
         public string richTBtext
         {
@@ -492,7 +516,8 @@ namespace tonkIDE
 
         public void runCPP()
         {
-            OpenFileDialog odf = new OpenFileDialog();
+            
+            FileDialog odf = new OpenFileDialog();
             odf.Filter = "C++ Files (*.cpp)|*.cpp";
             if (odf.ShowDialog() == DialogResult.OK)
             {
