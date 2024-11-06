@@ -43,6 +43,10 @@ namespace tonkIDE
             {
                 TH.setBrainhurtTheme(richTextBox1, keywords, highlightAllCode);
             }
+            if (Properties.Settings.Default.theme == "SussyBaka")
+            {
+                TH.setDarkTheme(richTextBox1, keywords, highlightAllCode);
+            }
 
             this.turtle_box.Visible = false;
             this.turtle_close.Visible = false;
@@ -55,7 +59,7 @@ namespace tonkIDE
             richTextBox1.ScrollBars = RichTextBoxScrollBars.Horizontal;  // Enable horizontal scrollbar
             this.file_name.ReadOnly = true;
 
-            
+
 
         }
         OpenFileDialog currFile = new OpenFileDialog();
@@ -179,6 +183,31 @@ namespace tonkIDE
 
                 highlightAllCode();
                 Properties.Settings.Default.theme = "Brainhurt";
+                Properties.Settings.Default.Save();
+            }
+            public void setSussyBakaTheme(RichTextBox richTextBox1, KW[] keywords, HighlightDelegate highlightAllCode)
+            {
+                richTextBox1.BackColor = Color.FromArgb(0, 255, 0);
+                richTextBox1.ForeColor = Color.Pink;
+                for (int i = 0; i < 5; i++) // cout,cin,new,return
+                {
+                    keywords[i].color = Color.Red;
+                }
+                keywords[4].color = Color.DarkOrange; //include
+                keywords[5].color = Color.Coral; // << and >>
+                keywords[6].color = Color.SeaGreen;
+                for (int i = 7; i < 12; i++) //variables
+                {
+                    keywords[i].color = Color.SeaShell;
+                }
+                keywords[13].color = Color.Yellow; //Brackets
+                keywords[14].color = Color.GreenYellow;
+                keywords[15].color = Color.LawnGreen; //class
+                keywords[16].color = Color.Gold;
+
+
+                highlightAllCode();
+                Properties.Settings.Default.theme = "SussyBaka";
                 Properties.Settings.Default.Save();
             }
         }
@@ -518,7 +547,7 @@ namespace tonkIDE
 
         public void runCPP()
         {
-            
+
             FileDialog odf = new OpenFileDialog();
             odf.Filter = "C++ Files (*.cpp)|*.cpp";
             if (odf.ShowDialog() == DialogResult.OK)
@@ -717,6 +746,10 @@ namespace tonkIDE
         {
             TH.setBrainhurtTheme(richTextBox1, keywords, highlightAllCode);
         }
+        private void sussyBakaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TH.setSussyBakaTheme(richTextBox1, keywords, highlightAllCode);
+        }
 
         private void debug_btn_Click(object sender, EventArgs e)
         {
@@ -777,5 +810,7 @@ namespace tonkIDE
         {
 
         }
+
+ 
     }
 }

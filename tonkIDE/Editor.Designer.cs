@@ -79,6 +79,7 @@
             file_name = new TextBox();
             groupBox4 = new GroupBox();
             file_list = new ListBox();
+            sussyBakaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -138,21 +139,21 @@
             // saveAscppToolStripMenuItem
             // 
             saveAscppToolStripMenuItem.Name = "saveAscppToolStripMenuItem";
-            saveAscppToolStripMenuItem.Size = new Size(180, 22);
+            saveAscppToolStripMenuItem.Size = new Size(145, 22);
             saveAscppToolStripMenuItem.Text = "Save as .cpp";
             saveAscppToolStripMenuItem.Click += saveAscppToolStripMenuItem_Click;
             // 
             // opencppToolStripMenuItem
             // 
             opencppToolStripMenuItem.Name = "opencppToolStripMenuItem";
-            opencppToolStripMenuItem.Size = new Size(180, 22);
+            opencppToolStripMenuItem.Size = new Size(145, 22);
             opencppToolStripMenuItem.Text = "Open .cpp";
             opencppToolStripMenuItem.Click += opencppToolStripMenuItem_Click;
             // 
             // newcppFileToolStripMenuItem
             // 
             newcppFileToolStripMenuItem.Name = "newcppFileToolStripMenuItem";
-            newcppFileToolStripMenuItem.Size = new Size(180, 22);
+            newcppFileToolStripMenuItem.Size = new Size(145, 22);
             newcppFileToolStripMenuItem.Text = "New .cpp File";
             newcppFileToolStripMenuItem.Click += newcppFileToolStripMenuItem_Click;
             // 
@@ -174,7 +175,7 @@
             // 
             // backgroundToolStripMenuItem
             // 
-            backgroundToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { darkToolStripMenuItem, whiteToolStripMenuItem, obsidianToolStripMenuItem, brainHurtToolStripMenuItem });
+            backgroundToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { darkToolStripMenuItem, whiteToolStripMenuItem, obsidianToolStripMenuItem, brainHurtToolStripMenuItem, sussyBakaToolStripMenuItem });
             backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
             backgroundToolStripMenuItem.Size = new Size(83, 20);
             backgroundToolStripMenuItem.Text = "Background";
@@ -638,6 +639,13 @@
             file_list.TabIndex = 6;
             file_list.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
+            // sussyBakaToolStripMenuItem
+            // 
+            sussyBakaToolStripMenuItem.Name = "sussyBakaToolStripMenuItem";
+            sussyBakaToolStripMenuItem.Size = new Size(180, 22);
+            sussyBakaToolStripMenuItem.Text = "SussyBaka";
+            sussyBakaToolStripMenuItem.Click += sussyBakaToolStripMenuItem_Click;
+            // 
             // Editor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -731,5 +739,6 @@
         private TextBox file_name;
         private GroupBox groupBox4;
         private ListBox file_list;
+        private ToolStripMenuItem sussyBakaToolStripMenuItem;
     }
 }
