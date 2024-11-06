@@ -68,6 +68,8 @@ namespace tonkIDE
         }
         public delegate void HighlightDelegate();
 
+        int a = 3;
+
         //THEME CHANGING CLASS METHODS
         public class themeChanger
         {
