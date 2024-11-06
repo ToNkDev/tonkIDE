@@ -180,7 +180,7 @@ namespace tonkIDE
                 recolor(index, clr, keyword.Length);
             }
         }
-
+      
 
         KW[] keywords = new KW[]
        {
@@ -515,21 +515,21 @@ namespace tonkIDE
         {
             richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
             richTextBox1.ForeColor = Color.Silver;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++) // cout,cin,new,return
             {
                 keywords[i].color = Color.Magenta;
             }
-            keywords[4].color = Color.LightBlue;
-            keywords[5].color = Color.DarkGreen;
-            keywords[6].color = Color.DarkGreen;
-            for (int i = 7; i < 12; i++)
+            keywords[4].color = Color.LightBlue; //include
+            keywords[5].color = Color.DarkGreen; // << and >>
+            keywords[6].color = Color.DarkGreen; 
+            for (int i = 7; i < 12; i++) //variables
             {
                 keywords[i].color = Color.CadetBlue;
             }
-            keywords[13].color = Color.Violet;
+            keywords[13].color = Color.Violet; //Brackets
             keywords[14].color = Color.Violet;
-            keywords[15].color = Color.DarkGreen;
-            keywords[16].color = Color.DarkGreen;
+            keywords[15].color = Color.DarkGreen; //class
+            keywords[16].color = Color.DarkGreen; 
 
 
             highlightAllCode();
@@ -539,20 +539,20 @@ namespace tonkIDE
         {
             richTextBox1.BackColor = Color.FromArgb(255, 255, 255);
             richTextBox1.ForeColor = Color.Black;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++) // cout,cin,new,return
             {
                 keywords[i].color = Color.DarkMagenta;
             }
-            keywords[4].color = Color.DarkBlue;
-            keywords[5].color = Color.DarkGreen;
+            keywords[4].color = Color.DarkBlue; //include
+            keywords[5].color = Color.DarkGreen; // << and >>
             keywords[6].color = Color.DarkGreen;
-            for (int i = 7; i < 12; i++)
+            for (int i = 7; i < 12; i++) //variables
             {
                 keywords[i].color = Color.DarkOliveGreen;
             }
-            keywords[13].color = Color.DarkViolet;
+            keywords[13].color = Color.DarkViolet; //Brackets
             keywords[14].color = Color.DarkViolet;
-            keywords[15].color = Color.DarkGreen;
+            keywords[15].color = Color.DarkGreen; //class
             keywords[16].color = Color.DarkGreen;
 
             highlightAllCode();
@@ -563,20 +563,20 @@ namespace tonkIDE
         {
             richTextBox1.BackColor = Color.FromArgb(10, 0, 10);
             richTextBox1.ForeColor = Color.Silver;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++) // cout,cin,new,return
             {
                 keywords[i].color = Color.Magenta;
             }
-            keywords[4].color = Color.LightBlue;
-            keywords[5].color = Color.DarkGreen;
+            keywords[4].color = Color.LightBlue; //include
+            keywords[5].color = Color.DarkGreen; // << and >>
             keywords[6].color = Color.DarkGreen;
-            for (int i = 7; i < 12; i++)
+            for (int i = 7; i < 12; i++) //variables
             {
                 keywords[i].color = Color.CadetBlue;
             }
-            keywords[13].color = Color.Violet;
+            keywords[13].color = Color.Violet; //Brackets
             keywords[14].color = Color.Violet;
-            keywords[15].color = Color.DarkGreen;
+            keywords[15].color = Color.DarkGreen; //class
             keywords[16].color = Color.DarkGreen;
 
 
@@ -589,20 +589,20 @@ namespace tonkIDE
 
             richTextBox1.BackColor = Color.FromArgb(255, 128, 0);
             richTextBox1.ForeColor = Color.Pink;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++) // cout,cin,new,return
             {
                 keywords[i].color = Color.Red;
             }
-            keywords[4].color = Color.DarkOrange;
-            keywords[5].color = Color.Coral;
+            keywords[4].color = Color.DarkOrange; //include
+            keywords[5].color = Color.Coral; // << and >>
             keywords[6].color = Color.SeaGreen;
-            for (int i = 7; i < 12; i++)
+            for (int i = 7; i < 12; i++) //variables
             {
                 keywords[i].color = Color.SeaShell;
             }
-            keywords[13].color = Color.Yellow;
+            keywords[13].color = Color.Yellow; //Brackets
             keywords[14].color = Color.GreenYellow;
-            keywords[15].color = Color.LawnGreen;
+            keywords[15].color = Color.LawnGreen; //class
             keywords[16].color = Color.Gold;
 
 
