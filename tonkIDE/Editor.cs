@@ -510,7 +510,19 @@ namespace tonkIDE
                 highlightAllCode();
             }
         }
+        public static int spaces = 4;
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            // Handle Tab key
+            if (keyData == Keys.Tab)
+            {
+                // Insert spaces at the current cursor position
+                richTextBox1.SelectedText = new string(' ', spaces);
+                return true; // Indicate that we've handled the key
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
         private void darkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
