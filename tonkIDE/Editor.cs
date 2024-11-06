@@ -5,11 +5,13 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static tonkIDE.Editor;
 
 namespace tonkIDE
 {
@@ -24,6 +26,22 @@ namespace tonkIDE
             InitializeComponent();
             richTextBox1.KeyDown += richTextBox1_KeyDown;
             highlightAllCode();
+            if(Properties.Settings.Default.theme == "Dark")
+            {
+                TH.setDarkTheme(richTextBox1, keywords, highlightAllCode);
+            }
+            if (Properties.Settings.Default.theme == "White")
+            {
+                TH.setWhiteTheme(richTextBox1, keywords, highlightAllCode);
+            }
+            if (Properties.Settings.Default.theme == "Obsidian")
+            {
+                TH.setObsidianTheme(richTextBox1, keywords, highlightAllCode);
+            }
+            if (Properties.Settings.Default.theme == "Brainhurt")
+            {
+                TH.setBrainhurtTheme(richTextBox1, keywords, highlightAllCode);
+            }
 
         }
         private bool isHighlighting = false;
@@ -39,6 +57,117 @@ namespace tonkIDE
                 e.Handled = true;
             }
         }
+        public delegate void HighlightDelegate();
+
+        //THEME CHANGING CLASS METHODS
+        public class themeChanger
+        {
+            public void setDarkTheme(RichTextBox richTextBox1, KW[] keywords,HighlightDelegate highlightAllCode)
+            {
+                richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
+                richTextBox1.ForeColor = Color.Silver;
+                for (int i = 0; i < 5; i++) // cout,cin,new,return
+                {
+                    keywords[i].color = Color.Magenta;
+                }
+                keywords[4].color = Color.LightBlue; //include
+                keywords[5].color = Color.DarkGreen; // << and >>
+                keywords[6].color = Color.DarkGreen;
+                for (int i = 7; i < 12; i++) //variables
+                {
+                    keywords[i].color = Color.CadetBlue;
+                }
+                keywords[13].color = Color.Violet; //Brackets
+                keywords[14].color = Color.Violet;
+                keywords[15].color = Color.DarkGreen; //class
+                keywords[16].color = Color.DarkGreen;
+
+
+                highlightAllCode();
+                Properties.Settings.Default.theme = "Dark";
+                Properties.Settings.Default.Save();
+            }
+            public void setWhiteTheme(RichTextBox richTextBox1, KW[] keywords, HighlightDelegate highlightAllCode)
+            {
+                richTextBox1.BackColor = Color.FromArgb(255, 255, 255);
+                richTextBox1.ForeColor = Color.Black;
+                for (int i = 0; i < 5; i++) // cout,cin,new,return
+                {
+                    keywords[i].color = Color.DarkMagenta;
+                }
+                keywords[4].color = Color.DarkBlue; //include
+                keywords[5].color = Color.DarkGreen; // << and >>
+                keywords[6].color = Color.DarkGreen;
+                for (int i = 7; i < 12; i++) //variables
+                {
+                    keywords[i].color = Color.DarkOliveGreen;
+                }
+                keywords[13].color = Color.DarkViolet; //Brackets
+                keywords[14].color = Color.DarkViolet;
+                keywords[15].color = Color.DarkGreen; //class
+                keywords[16].color = Color.DarkGreen;
+
+                highlightAllCode();
+                Properties.Settings.Default.theme = "White";
+                Properties.Settings.Default.Save();
+            }
+
+            public void setObsidianTheme(RichTextBox richTextBox1, KW[] keywords, HighlightDelegate highlightAllCode)
+            {
+                richTextBox1.BackColor = Color.FromArgb(10, 0, 10);
+                richTextBox1.ForeColor = Color.Silver;
+                for (int i = 0; i < 5; i++) // cout,cin,new,return
+                {
+                    keywords[i].color = Color.Magenta;
+                }
+                keywords[4].color = Color.LightBlue; //include
+                keywords[5].color = Color.DarkGreen; // << and >>
+                keywords[6].color = Color.DarkGreen;
+                for (int i = 7; i < 12; i++) //variables
+                {
+                    keywords[i].color = Color.CadetBlue;
+                }
+                keywords[13].color = Color.Violet; //Brackets
+                keywords[14].color = Color.Violet;
+                keywords[15].color = Color.DarkGreen; //class
+                keywords[16].color = Color.DarkGreen;
+
+
+                highlightAllCode();
+                Properties.Settings.Default.theme = "Obsidian";
+                Properties.Settings.Default.Save();
+               
+            }
+
+            public void setBrainhurtTheme(RichTextBox richTextBox1, KW[] keywords, HighlightDelegate highlightAllCode)
+            {
+                richTextBox1.BackColor = Color.FromArgb(255, 128, 0);
+                richTextBox1.ForeColor = Color.Pink;
+                for (int i = 0; i < 5; i++) // cout,cin,new,return
+                {
+                    keywords[i].color = Color.Red;
+                }
+                keywords[4].color = Color.DarkOrange; //include
+                keywords[5].color = Color.Coral; // << and >>
+                keywords[6].color = Color.SeaGreen;
+                for (int i = 7; i < 12; i++) //variables
+                {
+                    keywords[i].color = Color.SeaShell;
+                }
+                keywords[13].color = Color.Yellow; //Brackets
+                keywords[14].color = Color.GreenYellow;
+                keywords[15].color = Color.LawnGreen; //class
+                keywords[16].color = Color.Gold;
+
+
+                highlightAllCode();
+                Properties.Settings.Default.theme = "Brainhurt";
+                Properties.Settings.Default.Save();
+            }
+        }
+
+
+        themeChanger TH = new themeChanger();
 
         private Size oldSize;
         private void Form1_Load(object sender, EventArgs e) => oldSize = base.Size;
@@ -80,7 +209,7 @@ namespace tonkIDE
         }
 
 
-
+       
 
 
         public void saveFile(String format)
@@ -525,100 +654,23 @@ namespace tonkIDE
         }
         private void darkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
-            richTextBox1.ForeColor = Color.Silver;
-            for (int i = 0; i < 5; i++) // cout,cin,new,return
-            {
-                keywords[i].color = Color.Magenta;
-            }
-            keywords[4].color = Color.LightBlue; //include
-            keywords[5].color = Color.DarkGreen; // << and >>
-            keywords[6].color = Color.DarkGreen;
-            for (int i = 7; i < 12; i++) //variables
-            {
-                keywords[i].color = Color.CadetBlue;
-            }
-            keywords[13].color = Color.Violet; //Brackets
-            keywords[14].color = Color.Violet;
-            keywords[15].color = Color.DarkGreen; //class
-            keywords[16].color = Color.DarkGreen;
-
-
-            highlightAllCode();
+            TH.setDarkTheme(richTextBox1, keywords, highlightAllCode);
         }
 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.BackColor = Color.FromArgb(255, 255, 255);
-            richTextBox1.ForeColor = Color.Black;
-            for (int i = 0; i < 5; i++) // cout,cin,new,return
-            {
-                keywords[i].color = Color.DarkMagenta;
-            }
-            keywords[4].color = Color.DarkBlue; //include
-            keywords[5].color = Color.DarkGreen; // << and >>
-            keywords[6].color = Color.DarkGreen;
-            for (int i = 7; i < 12; i++) //variables
-            {
-                keywords[i].color = Color.DarkOliveGreen;
-            }
-            keywords[13].color = Color.DarkViolet; //Brackets
-            keywords[14].color = Color.DarkViolet;
-            keywords[15].color = Color.DarkGreen; //class
-            keywords[16].color = Color.DarkGreen;
 
-            highlightAllCode();
-
+            TH.setWhiteTheme(richTextBox1, keywords, highlightAllCode);
         }
 
         private void obsidianToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.BackColor = Color.FromArgb(10, 0, 10);
-            richTextBox1.ForeColor = Color.Silver;
-            for (int i = 0; i < 5; i++) // cout,cin,new,return
-            {
-                keywords[i].color = Color.Magenta;
-            }
-            keywords[4].color = Color.LightBlue; //include
-            keywords[5].color = Color.DarkGreen; // << and >>
-            keywords[6].color = Color.DarkGreen;
-            for (int i = 7; i < 12; i++) //variables
-            {
-                keywords[i].color = Color.CadetBlue;
-            }
-            keywords[13].color = Color.Violet; //Brackets
-            keywords[14].color = Color.Violet;
-            keywords[15].color = Color.DarkGreen; //class
-            keywords[16].color = Color.DarkGreen;
-
-
-            highlightAllCode();
+            TH.setObsidianTheme(richTextBox1, keywords, highlightAllCode);
         }
 
         private void brainHurtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
-            richTextBox1.BackColor = Color.FromArgb(255, 128, 0);
-            richTextBox1.ForeColor = Color.Pink;
-            for (int i = 0; i < 5; i++) // cout,cin,new,return
-            {
-                keywords[i].color = Color.Red;
-            }
-            keywords[4].color = Color.DarkOrange; //include
-            keywords[5].color = Color.Coral; // << and >>
-            keywords[6].color = Color.SeaGreen;
-            for (int i = 7; i < 12; i++) //variables
-            {
-                keywords[i].color = Color.SeaShell;
-            }
-            keywords[13].color = Color.Yellow; //Brackets
-            keywords[14].color = Color.GreenYellow;
-            keywords[15].color = Color.LawnGreen; //class
-            keywords[16].color = Color.Gold;
-
-
-            highlightAllCode();
+            TH.setBrainhurtTheme(richTextBox1, keywords, highlightAllCode);
         }
 
         private void debug_btn_Click(object sender, EventArgs e)
