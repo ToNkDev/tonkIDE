@@ -49,6 +49,8 @@ namespace tonkIDE
             this.turtle_label.Visible = false;
             this.turtle_label.ReadOnly = true;
 
+            this.file_name.ReadOnly = true;
+
         }
         private bool isHighlighting = false;
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -225,7 +227,7 @@ namespace tonkIDE
             {
                 string FileName = sfd.FileName + format;
                 File.WriteAllText(FileName, this.richTextBox1.Text, Encoding.UTF8);
-
+                this.file_name.Text = sfd.FileName;
             }
 
         }
@@ -444,6 +446,17 @@ namespace tonkIDE
                 this.richTextBox1.Text = value;
             }
         }
+        public string fileNameText
+        {
+            get
+            {
+                return this.file_name.Text;
+            }
+            set
+            {
+                this.file_name.Text = value;
+            }
+        }
 
         public Boolean codeVal
         {
@@ -543,6 +556,7 @@ namespace tonkIDE
         {
             saveFile(".txt");
             this.codeVal = false;
+            
         }
 
         private void open_txt_Click(object sender, EventArgs e)
@@ -553,6 +567,8 @@ namespace tonkIDE
                 String S = File.ReadAllText(odf.FileName);
                 this.richTextBox1.Text = S;
                 this.codeVal = false;
+                this.file_name.Text = odf.FileName;
+                this.file_name.Text = odf.FileName;
             }
         }
 
@@ -574,6 +590,7 @@ namespace tonkIDE
                 String S = File.ReadAllText(odf.FileName);
                 this.richTextBox1.Text = S;
                 this.codeVal = true;
+                this.file_name.Text = odf.FileName;
             }
             highlightAllCode();
         }
@@ -585,6 +602,7 @@ namespace tonkIDE
             {
                 String S = File.ReadAllText(odf.FileName);
                 this.richTextBox1.Text = S;
+                this.file_name.Text = odf.FileName;
             }
             highlightAllCode();
         }
@@ -682,26 +700,27 @@ namespace tonkIDE
         private void debug_btn_Click(object sender, EventArgs e)
         {
             int lenght = this.richTextBox1.Text.Length;
-            int openCount = 0;
-            int closedCount = 0;
+            int openBracketCount = 0;
+            int closedBracketCount = 0;
+
             for (int i = 0; i < lenght; i++)
             {
                 if (richTextBox1.Text[i] == '{')
                 {
-                    openCount++;
+                    openBracketCount++;
                 }
                 if (richTextBox1.Text[i] == '}')
                 {
-                    closedCount++;
+                    closedBracketCount++;
                 }
             }
-            if (openCount == closedCount)
+            if (openBracketCount == closedBracketCount)
             {
                 MessageBox.Show("You have the correct number of brackets!", "Debug Bracket Counter", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("You have: \n " + openCount.ToString() + " Opening brackets  {  \n " + closedCount.ToString() + " Closing Brackets  } ", "Debug Bracket Counter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have: \n " + openBracketCount.ToString() + " Opening brackets  {  \n " + closedBracketCount.ToString() + " Closing Brackets  } ", "Debug Bracket Counter", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -721,7 +740,7 @@ namespace tonkIDE
                 "Go back to Scratch",
                 "Ты полный отстой",
             };
-            
+
         private void turtle_btn_Click(object sender, EventArgs e)
         {
             this.turtle_box.Visible = true;
@@ -732,5 +751,7 @@ namespace tonkIDE
             int rndIndex = rnd.Next(0, 6);
             this.turtle_label.Text = turtle_quotes[rndIndex];
         }
+
+       
     }
 }

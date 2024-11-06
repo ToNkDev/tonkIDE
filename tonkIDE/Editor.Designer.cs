@@ -72,10 +72,11 @@
             richTextBox1 = new RichTextBox();
             fontDialog1 = new FontDialog();
             turtle_box = new GroupBox();
+            turtle_title = new Label();
             turtle_label = new TextBox();
             turtle_image = new PictureBox();
             turtle_close = new Button();
-            turtle_title = new Label();
+            file_name = new TextBox();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -134,21 +135,21 @@
             // saveAscppToolStripMenuItem
             // 
             saveAscppToolStripMenuItem.Name = "saveAscppToolStripMenuItem";
-            saveAscppToolStripMenuItem.Size = new Size(145, 22);
+            saveAscppToolStripMenuItem.Size = new Size(180, 22);
             saveAscppToolStripMenuItem.Text = "Save as .cpp";
             saveAscppToolStripMenuItem.Click += saveAscppToolStripMenuItem_Click;
             // 
             // opencppToolStripMenuItem
             // 
             opencppToolStripMenuItem.Name = "opencppToolStripMenuItem";
-            opencppToolStripMenuItem.Size = new Size(145, 22);
+            opencppToolStripMenuItem.Size = new Size(180, 22);
             opencppToolStripMenuItem.Text = "Open .cpp";
             opencppToolStripMenuItem.Click += opencppToolStripMenuItem_Click;
             // 
             // newcppFileToolStripMenuItem
             // 
             newcppFileToolStripMenuItem.Name = "newcppFileToolStripMenuItem";
-            newcppFileToolStripMenuItem.Size = new Size(145, 22);
+            newcppFileToolStripMenuItem.Size = new Size(180, 22);
             newcppFileToolStripMenuItem.Text = "New .cpp File";
             newcppFileToolStripMenuItem.Click += newcppFileToolStripMenuItem_Click;
             // 
@@ -538,9 +539,9 @@
             richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
             richTextBox1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             richTextBox1.ForeColor = Color.Silver;
-            richTextBox1.Location = new Point(241, 49);
+            richTextBox1.Location = new Point(241, 69);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1420, 881);
+            richTextBox1.Size = new Size(1420, 861);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
@@ -556,6 +557,17 @@
             turtle_box.Size = new Size(311, 282);
             turtle_box.TabIndex = 3;
             turtle_box.TabStop = false;
+            // 
+            // turtle_title
+            // 
+            turtle_title.AutoSize = true;
+            turtle_title.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            turtle_title.ForeColor = Color.Gray;
+            turtle_title.Location = new Point(6, 37);
+            turtle_title.Name = "turtle_title";
+            turtle_title.Size = new Size(207, 19);
+            turtle_title.TabIndex = 32;
+            turtle_title.Text = "Support Turtle says...";
             // 
             // turtle_label
             // 
@@ -591,16 +603,15 @@
             turtle_close.UseVisualStyleBackColor = false;
             turtle_close.Click += turtle_close_Click;
             // 
-            // turtle_title
+            // file_name
             // 
-            turtle_title.AutoSize = true;
-            turtle_title.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            turtle_title.ForeColor = Color.Gray;
-            turtle_title.Location = new Point(6, 37);
-            turtle_title.Name = "turtle_title";
-            turtle_title.Size = new Size(207, 19);
-            turtle_title.TabIndex = 32;
-            turtle_title.Text = "Support Turtle says...";
+            file_name.BackColor = Color.FromArgb(35, 35, 35);
+            file_name.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            file_name.ForeColor = Color.Silver;
+            file_name.Location = new Point(241, 40);
+            file_name.Name = "file_name";
+            file_name.Size = new Size(1420, 22);
+            file_name.TabIndex = 4;
             // 
             // Editor
             // 
@@ -608,6 +619,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(1673, 958);
+            Controls.Add(file_name);
             Controls.Add(turtle_box);
             Controls.Add(richTextBox1);
             Controls.Add(groupBox1);
@@ -689,5 +701,6 @@
         private PictureBox turtle_image;
         private Button turtle_close;
         private Label turtle_title;
+        private TextBox file_name;
     }
 }
