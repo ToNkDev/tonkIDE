@@ -45,7 +45,7 @@ namespace tonkIDE
             }
             if (Properties.Settings.Default.theme == "SussyBaka")
             {
-                TH.setDarkTheme(richTextBox1, keywords, highlightAllCode);
+                TH.setSussyBakaTheme(richTextBox1, keywords, highlightAllCode);
             }
 
             this.turtle_box.Visible = false;
