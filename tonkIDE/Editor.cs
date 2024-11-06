@@ -62,6 +62,35 @@ namespace tonkIDE
 
 
         }
+
+        private bool IsGccInstalled()
+        {
+            try
+            {
+                // Try to run 'gcc --version' to check if gcc is available in the PATH
+                ProcessStartInfo startInfo = new ProcessStartInfo()
+                {
+                    FileName = "gcc",
+                    Arguments = "--version",
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+
+                using (Process process = Process.Start(startInfo))
+                {
+                    if (process == null) return false;
+
+                    string output = process.StandardOutput.ReadToEnd();
+                    return !string.IsNullOrWhiteSpace(output);
+                }
+            }
+            catch (Exception)
+            {
+                return false; // If there is any exception, gcc is not installed
+            }
+        }
+
         OpenFileDialog currFile = new OpenFileDialog();
         private bool isHighlighting = false;
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -674,13 +703,29 @@ namespace tonkIDE
 
         private void run_cpp_Click(object sender, EventArgs e)
         {
-            runCPP();
-            this.codeVal = true;
+           if (IsGccInstalled())
+            {
+               
+                runCPP();
+                this.codeVal = true;
+            }
+            else
+            {
+                MessageBox.Show("You do not have MINGW ( gcc ) Installed. \n Check the README.txt for instructions", "Compiler Detector", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void runCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            runCPP();
+            if (IsGccInstalled())
+            {
+                runCPP();
+                this.codeVal = true;
+            }
+            else
+            {
+                MessageBox.Show("You do not have MINGW ( gcc ) Installed  \n Check the README.txt for instructions", "Compiler Detector", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void new_cpp_Click(object sender, EventArgs e)
