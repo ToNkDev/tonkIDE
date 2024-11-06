@@ -65,6 +65,10 @@
             pictureBox1 = new PictureBox();
             richTextBox1 = new RichTextBox();
             fontDialog1 = new FontDialog();
+            groupBox2 = new GroupBox();
+            groupBox3 = new GroupBox();
+            pictureBox11 = new PictureBox();
+            debug_btn = new Button();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -77,6 +81,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
             // fileToolStripMenuItem
@@ -161,52 +168,36 @@
             // darkToolStripMenuItem
             // 
             darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            darkToolStripMenuItem.Size = new Size(180, 22);
+            darkToolStripMenuItem.Size = new Size(125, 22);
             darkToolStripMenuItem.Text = "Dark";
             darkToolStripMenuItem.Click += darkToolStripMenuItem_Click;
             // 
             // whiteToolStripMenuItem
             // 
             whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(180, 22);
+            whiteToolStripMenuItem.Size = new Size(125, 22);
             whiteToolStripMenuItem.Text = "White";
             whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
             // 
             // obsidianToolStripMenuItem
             // 
             obsidianToolStripMenuItem.Name = "obsidianToolStripMenuItem";
-            obsidianToolStripMenuItem.Size = new Size(180, 22);
+            obsidianToolStripMenuItem.Size = new Size(125, 22);
             obsidianToolStripMenuItem.Text = "Obsidian";
             obsidianToolStripMenuItem.Click += obsidianToolStripMenuItem_Click;
             // 
             // brainHurtToolStripMenuItem
             // 
             brainHurtToolStripMenuItem.Name = "brainHurtToolStripMenuItem";
-            brainHurtToolStripMenuItem.Size = new Size(180, 22);
+            brainHurtToolStripMenuItem.Size = new Size(125, 22);
             brainHurtToolStripMenuItem.Text = "BrainHurt";
             brainHurtToolStripMenuItem.Click += brainHurtToolStripMenuItem_Click;
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(35, 35, 35);
-            groupBox1.Controls.Add(pictureBox6);
-            groupBox1.Controls.Add(highlight);
-            groupBox1.Controls.Add(pictureBox7);
-            groupBox1.Controls.Add(save_txt);
-            groupBox1.Controls.Add(pictureBox8);
-            groupBox1.Controls.Add(open_txt);
-            groupBox1.Controls.Add(pictureBox9);
-            groupBox1.Controls.Add(new_txt);
-            groupBox1.Controls.Add(pictureBox10);
-            groupBox1.Controls.Add(pictureBox5);
-            groupBox1.Controls.Add(run_cpp);
-            groupBox1.Controls.Add(pictureBox4);
-            groupBox1.Controls.Add(save_cpp);
-            groupBox1.Controls.Add(pictureBox3);
-            groupBox1.Controls.Add(open_cpp);
-            groupBox1.Controls.Add(pictureBox2);
-            groupBox1.Controls.Add(new_cpp);
-            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Controls.Add(groupBox3);
+            groupBox1.Controls.Add(groupBox2);
             groupBox1.Location = new Point(12, 40);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(223, 890);
@@ -219,7 +210,7 @@
             pictureBox6.Anchor = AnchorStyles.None;
             pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
             pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox6.Location = new Point(12, 791);
+            pictureBox6.Location = new Point(0, 359);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(46, 46);
             pictureBox6.TabIndex = 24;
@@ -231,7 +222,7 @@
             highlight.FlatStyle = FlatStyle.Flat;
             highlight.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             highlight.ForeColor = SystemColors.ButtonFace;
-            highlight.Location = new Point(64, 791);
+            highlight.Location = new Point(46, 359);
             highlight.Name = "highlight";
             highlight.Size = new Size(159, 46);
             highlight.TabIndex = 23;
@@ -245,7 +236,7 @@
             pictureBox7.Anchor = AnchorStyles.None;
             pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
             pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox7.Location = new Point(12, 349);
+            pictureBox7.Location = new Point(0, 255);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(46, 46);
             pictureBox7.TabIndex = 22;
@@ -257,7 +248,7 @@
             save_txt.FlatStyle = FlatStyle.Flat;
             save_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             save_txt.ForeColor = SystemColors.ButtonFace;
-            save_txt.Location = new Point(64, 349);
+            save_txt.Location = new Point(47, 255);
             save_txt.Name = "save_txt";
             save_txt.Size = new Size(159, 46);
             save_txt.TabIndex = 21;
@@ -271,7 +262,7 @@
             pictureBox8.Anchor = AnchorStyles.None;
             pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
             pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox8.Location = new Point(12, 297);
+            pictureBox8.Location = new Point(0, 203);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(46, 46);
             pictureBox8.TabIndex = 20;
@@ -283,7 +274,7 @@
             open_txt.FlatStyle = FlatStyle.Flat;
             open_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             open_txt.ForeColor = SystemColors.ButtonFace;
-            open_txt.Location = new Point(64, 297);
+            open_txt.Location = new Point(47, 203);
             open_txt.Name = "open_txt";
             open_txt.Size = new Size(159, 46);
             open_txt.TabIndex = 19;
@@ -297,7 +288,7 @@
             pictureBox9.Anchor = AnchorStyles.None;
             pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
             pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox9.Location = new Point(12, 245);
+            pictureBox9.Location = new Point(1, 151);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(46, 46);
             pictureBox9.TabIndex = 18;
@@ -309,7 +300,7 @@
             new_txt.FlatStyle = FlatStyle.Flat;
             new_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             new_txt.ForeColor = SystemColors.ButtonFace;
-            new_txt.Location = new Point(64, 245);
+            new_txt.Location = new Point(47, 151);
             new_txt.Name = "new_txt";
             new_txt.Size = new Size(159, 46);
             new_txt.TabIndex = 16;
@@ -322,7 +313,7 @@
             // 
             pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
             pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox10.Location = new Point(46, 102);
+            pictureBox10.Location = new Point(30, 22);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(123, 123);
             pictureBox10.TabIndex = 17;
@@ -333,7 +324,7 @@
             pictureBox5.Anchor = AnchorStyles.None;
             pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
             pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox5.Location = new Point(12, 739);
+            pictureBox5.Location = new Point(0, 307);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(46, 46);
             pictureBox5.TabIndex = 15;
@@ -345,7 +336,7 @@
             run_cpp.FlatStyle = FlatStyle.Flat;
             run_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             run_cpp.ForeColor = SystemColors.ButtonFace;
-            run_cpp.Location = new Point(64, 739);
+            run_cpp.Location = new Point(46, 307);
             run_cpp.Name = "run_cpp";
             run_cpp.Size = new Size(159, 46);
             run_cpp.TabIndex = 14;
@@ -359,7 +350,7 @@
             pictureBox4.Anchor = AnchorStyles.None;
             pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
             pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox4.Location = new Point(12, 687);
+            pictureBox4.Location = new Point(0, 255);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(46, 46);
             pictureBox4.TabIndex = 13;
@@ -371,7 +362,7 @@
             save_cpp.FlatStyle = FlatStyle.Flat;
             save_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             save_cpp.ForeColor = SystemColors.ButtonFace;
-            save_cpp.Location = new Point(64, 687);
+            save_cpp.Location = new Point(46, 255);
             save_cpp.Name = "save_cpp";
             save_cpp.Size = new Size(159, 46);
             save_cpp.TabIndex = 12;
@@ -385,7 +376,7 @@
             pictureBox3.Anchor = AnchorStyles.None;
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(12, 635);
+            pictureBox3.Location = new Point(0, 203);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(46, 46);
             pictureBox3.TabIndex = 11;
@@ -397,7 +388,7 @@
             open_cpp.FlatStyle = FlatStyle.Flat;
             open_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             open_cpp.ForeColor = SystemColors.ButtonFace;
-            open_cpp.Location = new Point(64, 635);
+            open_cpp.Location = new Point(46, 203);
             open_cpp.Name = "open_cpp";
             open_cpp.Size = new Size(159, 46);
             open_cpp.TabIndex = 10;
@@ -411,7 +402,7 @@
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(12, 583);
+            pictureBox2.Location = new Point(0, 151);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(46, 46);
             pictureBox2.TabIndex = 9;
@@ -423,7 +414,7 @@
             new_cpp.FlatStyle = FlatStyle.Flat;
             new_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             new_cpp.ForeColor = SystemColors.ButtonFace;
-            new_cpp.Location = new Point(64, 583);
+            new_cpp.Location = new Point(46, 151);
             new_cpp.Name = "new_cpp";
             new_cpp.Size = new Size(159, 46);
             new_cpp.TabIndex = 5;
@@ -436,7 +427,7 @@
             // 
             pictureBox1.BackgroundImage = Properties.Resources.terminal_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(46, 440);
+            pictureBox1.Location = new Point(46, 22);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(123, 123);
             pictureBox1.TabIndex = 5;
@@ -453,6 +444,68 @@
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(pictureBox10);
+            groupBox2.Controls.Add(new_txt);
+            groupBox2.Controls.Add(pictureBox9);
+            groupBox2.Controls.Add(pictureBox7);
+            groupBox2.Controls.Add(open_txt);
+            groupBox2.Controls.Add(save_txt);
+            groupBox2.Controls.Add(pictureBox8);
+            groupBox2.Location = new Point(5, 22);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(212, 325);
+            groupBox2.TabIndex = 25;
+            groupBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(pictureBox11);
+            groupBox3.Controls.Add(debug_btn);
+            groupBox3.Controls.Add(pictureBox6);
+            groupBox3.Controls.Add(pictureBox1);
+            groupBox3.Controls.Add(highlight);
+            groupBox3.Controls.Add(new_cpp);
+            groupBox3.Controls.Add(pictureBox5);
+            groupBox3.Controls.Add(pictureBox2);
+            groupBox3.Controls.Add(run_cpp);
+            groupBox3.Controls.Add(open_cpp);
+            groupBox3.Controls.Add(pictureBox4);
+            groupBox3.Controls.Add(pictureBox3);
+            groupBox3.Controls.Add(save_cpp);
+            groupBox3.Location = new Point(6, 353);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(212, 498);
+            groupBox3.TabIndex = 26;
+            groupBox3.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Anchor = AnchorStyles.None;
+            pictureBox11.BackgroundImage = (Image)resources.GetObject("pictureBox11.BackgroundImage");
+            pictureBox11.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox11.Location = new Point(1, 411);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(46, 46);
+            pictureBox11.TabIndex = 26;
+            pictureBox11.TabStop = false;
+            // 
+            // debug_btn
+            // 
+            debug_btn.BackColor = Color.FromArgb(64, 64, 64);
+            debug_btn.FlatStyle = FlatStyle.Flat;
+            debug_btn.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            debug_btn.ForeColor = SystemColors.ButtonFace;
+            debug_btn.Location = new Point(47, 411);
+            debug_btn.Name = "debug_btn";
+            debug_btn.Size = new Size(159, 46);
+            debug_btn.TabIndex = 25;
+            debug_btn.Text = "Debug";
+            debug_btn.TextAlign = ContentAlignment.MiddleRight;
+            debug_btn.UseVisualStyleBackColor = false;
+            debug_btn.Click += debug_btn_Click;
             // 
             // Editor
             // 
@@ -480,6 +533,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -522,5 +578,9 @@
         private ToolStripMenuItem whiteToolStripMenuItem;
         private ToolStripMenuItem obsidianToolStripMenuItem;
         private ToolStripMenuItem brainHurtToolStripMenuItem;
+        private GroupBox groupBox3;
+        private PictureBox pictureBox11;
+        private Button debug_btn;
+        private GroupBox groupBox2;
     }
 }

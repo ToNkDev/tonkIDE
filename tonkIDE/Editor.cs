@@ -180,7 +180,7 @@ namespace tonkIDE
                 recolor(index, clr, keyword.Length);
             }
         }
-      
+
 
         KW[] keywords = new KW[]
        {
@@ -521,7 +521,7 @@ namespace tonkIDE
             }
             keywords[4].color = Color.LightBlue; //include
             keywords[5].color = Color.DarkGreen; // << and >>
-            keywords[6].color = Color.DarkGreen; 
+            keywords[6].color = Color.DarkGreen;
             for (int i = 7; i < 12; i++) //variables
             {
                 keywords[i].color = Color.CadetBlue;
@@ -529,7 +529,7 @@ namespace tonkIDE
             keywords[13].color = Color.Violet; //Brackets
             keywords[14].color = Color.Violet;
             keywords[15].color = Color.DarkGreen; //class
-            keywords[16].color = Color.DarkGreen; 
+            keywords[16].color = Color.DarkGreen;
 
 
             highlightAllCode();
@@ -607,6 +607,32 @@ namespace tonkIDE
 
 
             highlightAllCode();
+        }
+
+        private void debug_btn_Click(object sender, EventArgs e)
+        {
+            int lenght = this.richTextBox1.Text.Length;
+            int openCount = 0;
+            int closedCount = 0;
+            for(int i=0; i<lenght; i++)
+            {
+                if (richTextBox1.Text[i] == '{')
+                {
+                    openCount++;
+                }
+                if (richTextBox1.Text[i] == '}')
+                {
+                    closedCount++;
+                }
+            }
+            if (openCount == closedCount)
+            {
+                MessageBox.Show("You have the correct number of brackets!", "Debug Bracket Counter", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("You have: \n "+openCount.ToString()+" Opening brackets  {  \n "+closedCount.ToString()+" Closing Brackets  } ", "Debug Bracket Counter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace tonkIDE
         private void new_cpp_Click(object sender, EventArgs e)
         {
             Editor EditorWindow = new Editor();
-            EditorWindow.richTBtext = "#include <iostream> \n using namespace std; \n int main()\n{\n\n\nint prevent_terminal_closingg; \n cin>>prevent_terminal_closingg;}";
+            EditorWindow.richTBtext = "#include <iostream> \n using namespace std; \n int main()\n{\n\n int prevent_terminal_closing; \n cin>>prevent_terminal_closing; \n}";
             EditorWindow.codeVal = true;
             EditorWindow.ShowDialog();
         }
