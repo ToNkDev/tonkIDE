@@ -219,6 +219,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.BackColor = Color.FromArgb(35, 35, 35);
             groupBox1.Controls.Add(groupBox3);
             groupBox1.Controls.Add(groupBox2);
@@ -254,7 +255,7 @@
             // 
             // pictureBox12
             // 
-            pictureBox12.Anchor = AnchorStyles.None;
+            pictureBox12.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
             pictureBox12.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox12.Location = new Point(1, 463);
@@ -265,6 +266,7 @@
             // 
             // turtle_btn
             // 
+            turtle_btn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             turtle_btn.BackColor = Color.FromArgb(64, 64, 64);
             turtle_btn.FlatStyle = FlatStyle.Flat;
             turtle_btn.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -280,7 +282,7 @@
             // 
             // pictureBox11
             // 
-            pictureBox11.Anchor = AnchorStyles.None;
+            pictureBox11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox11.BackgroundImage = (Image)resources.GetObject("pictureBox11.BackgroundImage");
             pictureBox11.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox11.Location = new Point(1, 411);
@@ -291,6 +293,7 @@
             // 
             // debug_btn
             // 
+            debug_btn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             debug_btn.BackColor = Color.FromArgb(64, 64, 64);
             debug_btn.FlatStyle = FlatStyle.Flat;
             debug_btn.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -306,7 +309,7 @@
             // 
             // pictureBox6
             // 
-            pictureBox6.Anchor = AnchorStyles.None;
+            pictureBox6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
             pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox6.Location = new Point(1, 359);
@@ -317,6 +320,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.BackgroundImage = Properties.Resources.terminal_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Location = new Point(46, 22);
@@ -327,6 +331,7 @@
             // 
             // highlight
             // 
+            highlight.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             highlight.BackColor = Color.FromArgb(64, 64, 64);
             highlight.FlatStyle = FlatStyle.Flat;
             highlight.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -342,6 +347,7 @@
             // 
             // new_cpp
             // 
+            new_cpp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             new_cpp.BackColor = Color.FromArgb(64, 64, 64);
             new_cpp.FlatStyle = FlatStyle.Flat;
             new_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -357,7 +363,7 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.Anchor = AnchorStyles.None;
+            pictureBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
             pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox5.Location = new Point(1, 307);
@@ -368,7 +374,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Anchor = AnchorStyles.None;
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.Location = new Point(1, 151);
@@ -379,6 +385,7 @@
             // 
             // run_cpp
             // 
+            run_cpp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             run_cpp.BackColor = Color.FromArgb(64, 64, 64);
             run_cpp.FlatStyle = FlatStyle.Flat;
             run_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -394,6 +401,7 @@
             // 
             // open_cpp
             // 
+            open_cpp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             open_cpp.BackColor = Color.FromArgb(64, 64, 64);
             open_cpp.FlatStyle = FlatStyle.Flat;
             open_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -409,7 +417,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Anchor = AnchorStyles.None;
+            pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
             pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox4.Location = new Point(1, 255);
@@ -420,7 +428,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Anchor = AnchorStyles.None;
+            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox3.Location = new Point(1, 203);
@@ -431,6 +439,7 @@
             // 
             // save_cpp
             // 
+            save_cpp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             save_cpp.BackColor = Color.FromArgb(64, 64, 64);
             save_cpp.FlatStyle = FlatStyle.Flat;
             save_cpp.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -446,6 +455,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox2.Controls.Add(pictureBox10);
             groupBox2.Controls.Add(new_txt);
             groupBox2.Controls.Add(pictureBox9);
@@ -461,6 +471,7 @@
             // 
             // pictureBox10
             // 
+            pictureBox10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
             pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox10.Location = new Point(47, 22);
@@ -471,6 +482,7 @@
             // 
             // new_txt
             // 
+            new_txt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             new_txt.BackColor = Color.FromArgb(64, 64, 64);
             new_txt.FlatStyle = FlatStyle.Flat;
             new_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -486,7 +498,7 @@
             // 
             // pictureBox9
             // 
-            pictureBox9.Anchor = AnchorStyles.None;
+            pictureBox9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
             pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox9.Location = new Point(1, 151);
@@ -497,7 +509,7 @@
             // 
             // pictureBox7
             // 
-            pictureBox7.Anchor = AnchorStyles.None;
+            pictureBox7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
             pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox7.Location = new Point(1, 255);
@@ -508,6 +520,7 @@
             // 
             // open_txt
             // 
+            open_txt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             open_txt.BackColor = Color.FromArgb(64, 64, 64);
             open_txt.FlatStyle = FlatStyle.Flat;
             open_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -523,6 +536,7 @@
             // 
             // save_txt
             // 
+            save_txt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             save_txt.BackColor = Color.FromArgb(64, 64, 64);
             save_txt.FlatStyle = FlatStyle.Flat;
             save_txt.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -538,7 +552,7 @@
             // 
             // pictureBox8
             // 
-            pictureBox8.Anchor = AnchorStyles.None;
+            pictureBox8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
             pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox8.Location = new Point(2, 203);
@@ -549,6 +563,7 @@
             // 
             // richTextBox1
             // 
+            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
             richTextBox1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             richTextBox1.ForeColor = Color.Silver;
@@ -561,6 +576,7 @@
             // 
             // turtle_box
             // 
+            turtle_box.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             turtle_box.Controls.Add(turtle_title);
             turtle_box.Controls.Add(turtle_label);
             turtle_box.Controls.Add(turtle_image);
@@ -573,6 +589,7 @@
             // 
             // turtle_title
             // 
+            turtle_title.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             turtle_title.AutoSize = true;
             turtle_title.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
             turtle_title.ForeColor = Color.Gray;
@@ -584,6 +601,7 @@
             // 
             // turtle_label
             // 
+            turtle_label.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             turtle_label.BackColor = Color.FromArgb(35, 35, 35);
             turtle_label.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             turtle_label.ForeColor = Color.Silver;
@@ -594,6 +612,7 @@
             // 
             // turtle_image
             // 
+            turtle_image.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             turtle_image.BackgroundImage = (Image)resources.GetObject("turtle_image.BackgroundImage");
             turtle_image.BackgroundImageLayout = ImageLayout.Stretch;
             turtle_image.Location = new Point(83, 97);
@@ -604,6 +623,7 @@
             // 
             // turtle_close
             // 
+            turtle_close.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             turtle_close.BackColor = Color.FromArgb(64, 64, 64);
             turtle_close.FlatStyle = FlatStyle.Flat;
             turtle_close.Font = new Font("Segoe UI Semilight", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -618,6 +638,7 @@
             // 
             // file_name
             // 
+            file_name.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             file_name.BackColor = Color.FromArgb(35, 35, 35);
             file_name.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             file_name.ForeColor = Color.Silver;
@@ -628,6 +649,7 @@
             // 
             // groupBox4
             // 
+            groupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox4.Controls.Add(file_list);
             groupBox4.Location = new Point(1461, 58);
             groupBox4.Name = "groupBox4";
@@ -637,6 +659,7 @@
             // 
             // file_list
             // 
+            file_list.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             file_list.BackColor = Color.FromArgb(35, 35, 35);
             file_list.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             file_list.ForeColor = Color.Silver;
@@ -650,6 +673,7 @@
             // 
             // groupBox5
             // 
+            groupBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox5.Controls.Add(groupBox1);
             groupBox5.Controls.Add(turtle_box);
             groupBox5.Controls.Add(groupBox4);
