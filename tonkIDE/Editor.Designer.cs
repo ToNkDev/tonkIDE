@@ -44,6 +44,7 @@
             whiteToolStripMenuItem = new ToolStripMenuItem();
             obsidianToolStripMenuItem = new ToolStripMenuItem();
             brainHurtToolStripMenuItem = new ToolStripMenuItem();
+            sussyBakaToolStripMenuItem = new ToolStripMenuItem();
             groupBox1 = new GroupBox();
             groupBox3 = new GroupBox();
             pictureBox12 = new PictureBox();
@@ -79,7 +80,7 @@
             file_name = new TextBox();
             groupBox4 = new GroupBox();
             file_list = new ListBox();
-            sussyBakaToolStripMenuItem = new ToolStripMenuItem();
+            groupBox5 = new GroupBox();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -99,6 +100,7 @@
             turtle_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)turtle_image).BeginInit();
             groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
             SuspendLayout();
             // 
             // fileToolStripMenuItem
@@ -183,37 +185,44 @@
             // darkToolStripMenuItem
             // 
             darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            darkToolStripMenuItem.Size = new Size(180, 22);
+            darkToolStripMenuItem.Size = new Size(128, 22);
             darkToolStripMenuItem.Text = "Dark";
             darkToolStripMenuItem.Click += darkToolStripMenuItem_Click;
             // 
             // whiteToolStripMenuItem
             // 
             whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(180, 22);
+            whiteToolStripMenuItem.Size = new Size(128, 22);
             whiteToolStripMenuItem.Text = "White";
             whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
             // 
             // obsidianToolStripMenuItem
             // 
             obsidianToolStripMenuItem.Name = "obsidianToolStripMenuItem";
-            obsidianToolStripMenuItem.Size = new Size(180, 22);
+            obsidianToolStripMenuItem.Size = new Size(128, 22);
             obsidianToolStripMenuItem.Text = "Obsidian";
             obsidianToolStripMenuItem.Click += obsidianToolStripMenuItem_Click;
             // 
             // brainHurtToolStripMenuItem
             // 
             brainHurtToolStripMenuItem.Name = "brainHurtToolStripMenuItem";
-            brainHurtToolStripMenuItem.Size = new Size(180, 22);
+            brainHurtToolStripMenuItem.Size = new Size(128, 22);
             brainHurtToolStripMenuItem.Text = "BrainHurt";
             brainHurtToolStripMenuItem.Click += brainHurtToolStripMenuItem_Click;
+            // 
+            // sussyBakaToolStripMenuItem
+            // 
+            sussyBakaToolStripMenuItem.Name = "sussyBakaToolStripMenuItem";
+            sussyBakaToolStripMenuItem.Size = new Size(128, 22);
+            sussyBakaToolStripMenuItem.Text = "SussyBaka";
+            sussyBakaToolStripMenuItem.Click += sussyBakaToolStripMenuItem_Click;
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(35, 35, 35);
             groupBox1.Controls.Add(groupBox3);
             groupBox1.Controls.Add(groupBox2);
-            groupBox1.Location = new Point(12, 40);
+            groupBox1.Location = new Point(15, 29);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(223, 890);
             groupBox1.TabIndex = 1;
@@ -543,7 +552,7 @@
             richTextBox1.BackColor = Color.FromArgb(35, 35, 35);
             richTextBox1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             richTextBox1.ForeColor = Color.Silver;
-            richTextBox1.Location = new Point(241, 69);
+            richTextBox1.Location = new Point(244, 51);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(1205, 861);
             richTextBox1.TabIndex = 2;
@@ -556,7 +565,7 @@
             turtle_box.Controls.Add(turtle_label);
             turtle_box.Controls.Add(turtle_image);
             turtle_box.Controls.Add(turtle_close);
-            turtle_box.Location = new Point(1347, 648);
+            turtle_box.Location = new Point(1347, 637);
             turtle_box.Name = "turtle_box";
             turtle_box.Size = new Size(314, 282);
             turtle_box.TabIndex = 3;
@@ -612,7 +621,7 @@
             file_name.BackColor = Color.FromArgb(35, 35, 35);
             file_name.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             file_name.ForeColor = Color.Silver;
-            file_name.Location = new Point(241, 40);
+            file_name.Location = new Point(244, 22);
             file_name.Name = "file_name";
             file_name.Size = new Size(1420, 22);
             file_name.TabIndex = 4;
@@ -620,7 +629,7 @@
             // groupBox4
             // 
             groupBox4.Controls.Add(file_list);
-            groupBox4.Location = new Point(1461, 69);
+            groupBox4.Location = new Point(1461, 58);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(200, 573);
             groupBox4.TabIndex = 5;
@@ -639,12 +648,18 @@
             file_list.TabIndex = 6;
             file_list.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // sussyBakaToolStripMenuItem
+            // groupBox5
             // 
-            sussyBakaToolStripMenuItem.Name = "sussyBakaToolStripMenuItem";
-            sussyBakaToolStripMenuItem.Size = new Size(180, 22);
-            sussyBakaToolStripMenuItem.Text = "SussyBaka";
-            sussyBakaToolStripMenuItem.Click += sussyBakaToolStripMenuItem_Click;
+            groupBox5.Controls.Add(groupBox1);
+            groupBox5.Controls.Add(turtle_box);
+            groupBox5.Controls.Add(groupBox4);
+            groupBox5.Controls.Add(richTextBox1);
+            groupBox5.Controls.Add(file_name);
+            groupBox5.Location = new Point(0, 27);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(1673, 954);
+            groupBox5.TabIndex = 6;
+            groupBox5.TabStop = false;
             // 
             // Editor
             // 
@@ -652,11 +667,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(1673, 958);
-            Controls.Add(groupBox4);
-            Controls.Add(file_name);
-            Controls.Add(turtle_box);
-            Controls.Add(richTextBox1);
-            Controls.Add(groupBox1);
+            Controls.Add(groupBox5);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
@@ -683,6 +694,8 @@
             turtle_box.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)turtle_image).EndInit();
             groupBox4.ResumeLayout(false);
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -740,5 +753,6 @@
         private GroupBox groupBox4;
         private ListBox file_list;
         private ToolStripMenuItem sussyBakaToolStripMenuItem;
+        private GroupBox groupBox5;
     }
 }

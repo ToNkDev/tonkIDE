@@ -25,8 +25,11 @@ namespace tonkIDE
         {
 
             InitializeComponent();
+           
             richTextBox1.KeyDown += richTextBox1_KeyDown;
             highlightAllCode();
+
+            // Initialize theme as per user settings
             if (Properties.Settings.Default.theme == "Dark")
             {
                 TH.setDarkTheme(richTextBox1, keywords, highlightAllCode);
@@ -48,21 +51,28 @@ namespace tonkIDE
                 TH.setSussyBakaTheme(richTextBox1, keywords, highlightAllCode);
             }
 
+            // Initializing turtle visibility settings
             this.turtle_box.Visible = false;
             this.turtle_close.Visible = false;
             this.turtle_image.Visible = false;
             this.turtle_label.Visible = false;
             this.turtle_label.ReadOnly = true;
 
+            // RichTextBox configurations
             this.richTextBox1.Multiline = true;
             richTextBox1.WordWrap = false;  // Disable word wrapping
             richTextBox1.ScrollBars = RichTextBoxScrollBars.Horizontal;  // Enable horizontal scrollbar
             this.file_name.ReadOnly = true;
 
+            // ListBox configuration
+            file_list.HorizontalScrollbar = true;
+
+            // Set initial directory path
+           
 
 
         }
-
+        
         private bool IsGccInstalled()
         {
             try
@@ -107,7 +117,7 @@ namespace tonkIDE
         }
         public delegate void HighlightDelegate();
 
-      
+
         //THEME CHANGING CLASS METHODS
         public class themeChanger
         {
@@ -243,28 +253,7 @@ namespace tonkIDE
 
         themeChanger TH = new themeChanger();
 
-        private Size oldSize;
-        private void Form1_Load(object sender, EventArgs e) => oldSize = base.Size;
 
-        protected override void OnResize(System.EventArgs e)
-        {
-            base.OnResize(e);
-
-            foreach (Control cnt in this.Controls)
-                ResizeAll(cnt, base.Size);
-
-            oldSize = base.Size;
-        }
-        private void ResizeAll(Control control, Size newSize)
-        {
-            int width = newSize.Width - oldSize.Width;
-            control.Left += (control.Left * width) / oldSize.Width;
-            control.Width += (control.Width * width) / oldSize.Width;
-
-            int height = newSize.Height - oldSize.Height;
-            control.Top += (control.Top * height) / oldSize.Height;
-            control.Height += (control.Height * height) / oldSize.Height;
-        }
 
         public void openFile()
         {
@@ -277,9 +266,22 @@ namespace tonkIDE
                 this.file_name.Text = odf.FileName;
                 this.file_name.Text = odf.FileName;
 
-                string directoryPath = Path.GetDirectoryName(odf.FileName);
-                this.file_list.Items.Clear();
-                String[] files = Directory.GetFiles(directoryPath);
+                string directoryPath = Path.GetDirectoryName(odf.FileName);  // Get the directory path from the file
+                this.file_list.Items.Clear();  // Clear previous items
+
+                // Get all files in the directory
+                string[] files = Directory.GetFiles(directoryPath);
+
+                // Get all directories in the directory
+                string[] directories = Directory.GetDirectories(directoryPath);
+
+                // Add directories first (optional, you can change the order)
+                foreach (string directory in directories)
+                {
+                    this.file_list.Items.Add(Path.GetFileName(directory) + @"\"); // Add a trailing backslash to indicate it's a directory
+                }
+
+                // Add files to the list
                 foreach (string file in files)
                 {
                     this.file_list.Items.Add(Path.GetFileName(file)); // Only add the file name
@@ -527,10 +529,22 @@ namespace tonkIDE
             set
             {
                 this.currFile = value;
-                this.file_name.Text = currFile.FileName;
-                string directoryPath = Path.GetDirectoryName(currFile.FileName);
-                this.file_list.Items.Clear();
-                String[] files = Directory.GetFiles(directoryPath);
+                string directoryPath = Path.GetDirectoryName(currFile.FileName);  // Get the directory path from the file
+                this.file_list.Items.Clear();  // Clear previous items
+
+                // Get all files in the directory
+                string[] files = Directory.GetFiles(directoryPath);
+
+                // Get all directories in the directory
+                string[] directories = Directory.GetDirectories(directoryPath);
+
+                // Add directories first (optional, you can change the order)
+                foreach (string directory in directories)
+                {
+                    this.file_list.Items.Add(Path.GetFileName(directory) + @"\"); // Add a trailing backslash to indicate it's a directory
+                }
+
+                // Add files to the list
                 foreach (string file in files)
                 {
                     this.file_list.Items.Add(Path.GetFileName(file)); // Only add the file name
@@ -703,9 +717,9 @@ namespace tonkIDE
 
         private void run_cpp_Click(object sender, EventArgs e)
         {
-           if (IsGccInstalled())
+            if (IsGccInstalled())
             {
-               
+
                 runCPP();
                 this.codeVal = true;
             }
@@ -838,6 +852,7 @@ namespace tonkIDE
                 "Go back to Scratch",
                 "Ты полный отстой",
             };
+        private string currentDirectoryPath;
 
         private void turtle_btn_Click(object sender, EventArgs e)
         {
@@ -855,6 +870,9 @@ namespace tonkIDE
 
         }
 
- 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
